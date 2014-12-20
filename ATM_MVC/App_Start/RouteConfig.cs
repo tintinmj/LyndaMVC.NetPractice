@@ -18,6 +18,17 @@ namespace ATM_MVC
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Serial Number",
+                url: "serial/{letterCase}",
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Serial",
+                    letterCase = "upper"
+                }
+            );
         }
     }
 }

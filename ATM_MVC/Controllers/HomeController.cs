@@ -26,5 +26,15 @@ namespace ATM_MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Serial(string letterCase)
+        {
+            var serial = "ATM1010";
+            if(letterCase == "lower")
+            {
+                return Content(serial.ToLower());
+            }
+            return Content(serial);
+        }
     }
 }
