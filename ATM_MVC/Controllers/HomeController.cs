@@ -22,7 +22,15 @@ namespace ATM_MVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Wanna chat? hit us (soft :P)";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(string messge)
+        {
+            ViewBag.Message = "Got your message thanks :)";
 
             return View();
         }
