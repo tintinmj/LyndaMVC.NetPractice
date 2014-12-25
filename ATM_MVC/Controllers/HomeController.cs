@@ -8,6 +8,7 @@ namespace ATM_MVC.Controllers
 {
     public class HomeController : Controller
     {
+        [MyLoggingFilterAttribute]
         public ActionResult Index()
         {
             return View();

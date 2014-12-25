@@ -29,3 +29,16 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+You are using @Request.Browser.Browser :)
+<br />
+You have following browsers installed in your machine : 
+
+@{ var browsers = Request.Browser.Browsers; 
+    <ul>
+        @foreach (var browser in browsers)
+        {
+            <li>@browser</li>
+        }
+    </ul>  
+ }
